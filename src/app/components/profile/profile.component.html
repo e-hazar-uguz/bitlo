@@ -1,0 +1,36 @@
+<h2>{{title}}</h2>
+<table class="mt-2 mb-2">
+    <tr>
+        <td >Adı</td>
+        <td >{{profileInfos?profileInfos.firstName:''}}</td>
+    </tr>
+
+    <tr>
+        <td >Soyadı</td>
+        <td >{{profileInfos?profileInfos.lastName:''}}</td>
+    </tr>
+
+    <tr>
+        <td >Doğum Tarihi</td>
+        <td >{{formatDate(profileInfos?profileInfos.dateOfBirth:'')}}</td>
+    </tr>
+
+    <tr>
+        <td >Telefon Numarası</td>
+        <td >{{profileInfos?(profileInfos.phoneNumber | phoneNumberFormat):''}}</td>
+    </tr>
+
+    <tr>
+        <td >Kimlik Numarası</td>
+        <td >{{profileInfos?profileInfos.identityNumber:''}}</td>
+    </tr>
+
+    <tr>
+        <td >Güncelleme Tarihi</td>
+        <td >{{profileInfos?profileInfos.updateDate:''}}</td>
+    </tr>
+</table>
+<div class="centered-links">
+    <a routerLink="/profile/balances">Bakiyeler</a>
+    <a routerLink="/profile/open-orders">Açık Emirler</a>
+  </div>

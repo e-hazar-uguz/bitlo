@@ -1,0 +1,36 @@
+.header {
+    background-color: #0a2363;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  .login a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .login {
+      margin-top: 10px;
+    }
+  }
+  

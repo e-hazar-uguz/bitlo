@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 2px solid;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        display: block;
+        width: 100%;
+    }
+}
+
+.centered-links {
+    text-align: center;
+    margin-top: 20px; /* Linklerin üstünde bir boşluk bırakabilirsiniz */
+  }
+  
+  .centered-links a {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  h2{
+    text-align: center;
+}

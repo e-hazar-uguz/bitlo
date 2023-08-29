@@ -1,0 +1,79 @@
+<div style="display: flex; justify-content: center;">
+    <h2>{{title}}</h2>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div *ngIf="dataLoaded==false" class="spinner-grow" style="width: 4rem; height: 4rem;" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div> 
+<div class="table-responsive mt-2 mb-2" style="padding: 1rem;">
+    <table class="table table-bordered table-hover table-striped" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+        <thead>
+          <tr>
+            <th scope="col">Sıra</th>
+            <th scope="col">Market Kodu</th>
+            <th scope="col">Marketin Güncel Fiyatı</th>
+            <th scope="col">Fiyat Değişimi(son 24 sa)</th>
+            <th scope="col">Fiyat Değişimi Yüzdesel(Son 24 sa)</th>
+            <th scope="col">En Yüksek Fiyat(Son 24 sa)</th>
+            <th scope="col">En Düşük Fiyat(Son 24 sa)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of marketsData; let i = index">
+            <td>{{i+1}}</td>
+            <td><a href="" (click)=" detailData(data.marketCode)" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">{{data.marketCode}}</a></td>
+            <td>{{data.currentQuote}}</td>
+            <td>{{data.change24h}}</td>
+            <td [ngStyle]="data.change24hPercent > '0.0000'?{'color': 'green'}:data.change24hPercent < '0'?{'color': 'red'}:{}">% {{data.change24hPercent}}</td>
+            <td>{{data.highestQuote24h}}</td>
+            <td>{{data.lowestQuote24h}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Market Detayı</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-8">
+              <ul>
+                <li><strong>Market Kodu : </strong>{{changedMarketCode}}</li>
+                <li><strong>Marketin Güncel Fiyatı : </strong>{{detailValue.currentQuote}}</li>
+                <li><strong>Marketin Fiyat Değişimi(son 24 sa)atteki : </strong>{{detailValue.change24h}}</li>
+                <li [ngStyle]="detailValue.change24hPercent > '0.0000'?{'color': 'green'}:detailValue.change24hPercent < '0.0000'?{'color': 'red'}:{}"><strong>Marketin Fiyat Değişimi Yüzdesel(Son 24 saaateki) : </strong>{{detailValue.change24hPercent}}</li>
+                <li><strong>Marketin En Yüksek Fiyatı(Son 24 saatteki) : </strong>{{detailValue.highestQuote24h}}</li>
+                <li><strong>Marketin En Yüksek Fiyatı(Son 24 saatteki) : </strong>{{detailValue.lowestQuote24h}}</li>
+                <li><strong>Marketi Ağırlıklı Ortalaması (Son 24 saatteki) : </strong>{{detailValue.weightedAverage24h}}</li>
+            </ul>
+            </div>
+            <div class="col-md-4">
+              <img [src]="logo" alt="" style="width: 300px;"/>
+            </div>
+          </div> 
+        </div>
+        <div class="modal-footer">
+            <button type="button"  id="cancel" class="btn  btn-danger  me-auto" data-bs-dismiss="modal">İptal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="results">
+  <h2>Tablo Sonuçları</h2>
+    <ul>
+        <li>Bugün  <strong style="color: green;">{{change24hPercentInfo}}</strong> adet marketin fiyat değişim yüzdesi pozitif olmuştur.</li>
+        <li>Bugün en fazla artış gösteren market <strong style="color:brown;">{{maxIncreaseInfo}}</strong> marketi olmuştur.</li>
+        <li>Bugün en fazla değer kaybeden market <strong style="color:grey;">{{maxDecreaseInfo}}</strong> marketi olmuştur.</li>
+        <li>Fiyatı 10,000 TRY üzerinde olan toplam <strong style="color:blue;">{{currentQuoteInfo}}</strong> adet market vardır.</li>
+        <li>Fiyatı  1.00 TRY’den daha az olan toplam <strong style="color:orangered;">{{currentQuoteLessInfo}}</strong> adet market vardır</li>
+        <li>Tüm marketlerdeki fiyatların toplamının aritmetik ortalaması  <strong style="color: darkgreen;">{{averagePrice}}</strong> TRY dir.</li>
+        <li>1 BTC = <strong style="color: crimson;">{{convertPrice| currency:'USD':'symbol':'1.2-2'}}</strong>  ABD dolarıdır</li>
+    </ul>
+  </div>

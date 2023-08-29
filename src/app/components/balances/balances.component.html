@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>{{title}}</h2>
+    <input type="checkbox" class="mb-2 mx-1" [(ngModel)]="showLowBalances" (ngModelChange)="filterBalances()"  style="margin-top: 50px;"><strong>{{showLowBalances?hide:show}}</strong>
+    <div class="table-responsive mb-2 mt-2">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Asset Logo</th>
+            <th>Asset Code</th>
+            <th>Kullanılabilir Bakiye</th>
+            <th>Kullanılabilir Bakiye (TL cinsinden)</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of filteredBalances ">
+                <td>{{data.assetCode}}</td>
+                <td>{{data.assetCode}}</td>
+                <td>{{data.availableAmount}}</td>
+                <td>{{data.availableAmountTRYValue}} ₺</td>
+              </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

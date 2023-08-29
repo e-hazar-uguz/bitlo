@@ -1,0 +1,19 @@
+<div class="login-container">
+    <form class="login-form" [formGroup]="loginForm">
+      <h2>LOGIN</h2>
+      <div class="form-group">
+        <label for="username">Kullanıcı Adı :</label>
+        <input type="text" id="username"formControlName="identifier"  placeholder="Kullanıcı adınızı giriniz." />
+      </div>
+      <small *ngIf="identifier && identifier.invalid" class="text-danger">Kullanıcı adı zorunludur.(test@test.com formatında giriniz.)</small>
+
+      <div class="form-group">
+        <label for="password">Şifre :</label>
+        <input type="password" id="password" formControlName="password" placeholder="Şifrenizi giriniz." />
+      </div>
+      <small *ngIf="password && password.invalid" class="text-danger">Parola alanı zorunludur!</small>
+
+      <button class="btn btn-primary mt-2" type="button" (click)="login()" [disabled]="!loginForm.valid">Giriş Yap</button>
+    </form>
+  </div>
+  
