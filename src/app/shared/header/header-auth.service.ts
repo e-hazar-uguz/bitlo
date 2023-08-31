@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HeaderAuthService {
 
-  constructor() { }
+  constructor(private router: Router,) { }
 
   private isLoggedIn: boolean = false;
 
@@ -16,6 +17,8 @@ export class HeaderAuthService {
   logout(): void {
     this.isLoggedIn = false;
     localStorage.clear();
+    this.router.navigate(['login']);
+    
   }
 
   isAuthenticated(): boolean {

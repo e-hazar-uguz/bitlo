@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { HeaderAuthService } from './header-auth.service';
 
 @Component({
@@ -13,8 +12,7 @@ export class HeaderComponent {
   isLogged=false;
   logo='assets/logo.png';
 
-  constructor(private router: Router,
-              public headerAuthService:HeaderAuthService) { }
+  constructor(public headerAuthService:HeaderAuthService) { }
 
   ngOnInit(): void {
     if (localStorage.length>0) {
@@ -31,10 +29,6 @@ export class HeaderComponent {
     else{
       this.headerAuthService.logout();
     }
-  }
-
-  logOut() {
-    localStorage.clear();
   }
 
   logout() {

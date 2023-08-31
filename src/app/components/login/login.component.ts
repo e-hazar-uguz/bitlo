@@ -34,12 +34,11 @@ export class LoginComponent implements OnInit {
   }
   
 
-  ngOnInit(): void {
-    //this.autoLogin();
-  }
+  ngOnInit(): void {}
+
   createLoginForm() {
     this.loginForm = this.formBuilder.group({
-      identifier: ['', [Validators.required, Validators.email]],
+      identifier: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       password: ['', Validators.required],
     });
   }
