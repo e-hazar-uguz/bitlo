@@ -43,8 +43,6 @@ export class MarketsComponent implements OnInit {
     this.dtOptions = {
       paging: true,
       info: true,
-      autoWidth: true,
-      responsive: true,
       pagingType: 'full_numbers',
       pageLength: 10,
       dom: '<lf<t>ip>',

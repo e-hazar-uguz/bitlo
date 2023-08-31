@@ -15,18 +15,16 @@
     width: 500px;
   }
   
-  @media (max-width: 1400px) {
-    .user-info-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 85vh;
-      text-align: left;
-    }
+@media screen and (max-width: 768px) {
+  .user-info {
+      width: 80%;
+      margin: 0 auto; 
+  }
 }
-@media (min-width: 768px) {
-  .user-info-container {
-    width: 100%;
+
+@media screen and (max-width: 576px) {
+  .user-info {
+      width: 100%;
+      
   }
 }

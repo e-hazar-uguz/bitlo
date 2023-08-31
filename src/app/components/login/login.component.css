@@ -1,5 +1,4 @@
 .login-container {
-    /*display flex düzeni ve hizalamayı yönetmek için kullanılır.esneklik sağlamak*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,4 +41,11 @@
   
   h2{
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .login-form {
+      width: 70%;
+      padding: 10px;
+  }
 }
