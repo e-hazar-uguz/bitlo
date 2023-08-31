@@ -17,7 +17,8 @@ const routes: Routes = [
   { path: 'markets', component: MarketsComponent },
   { path: 'profile/open-orders', component: OpenOrdersComponent },
   { path: 'profile/balances', component: BalancesComponent },
-  { path: 'access-message', component: AccessMessageComponent }
+  { path: 'access-message', component: AccessMessageComponent },
+  {path:'**', redirectTo:'main-page', pathMatch : 'full'}
 ];
 
 @NgModule({
