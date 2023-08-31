@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 85vh;
+    min-height: 81vh;
   }
   
   .login-form {
@@ -43,9 +43,109 @@
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 1600px){
   .login-form {
-      width: 70%;
-      padding: 10px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+  }
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85.5vh;
+  }
+
+}
+
+@media (min-width: 1281px) and (max-width: 1500px)  {
+  .login-form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+  }
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  
+
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  .login-form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+  }
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 89vh;
+  }
+  
+  
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .login-form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+  }
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .login-form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .login-form {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+  }
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

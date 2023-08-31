@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderAuthService } from './header-auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,7 @@ export class HeaderComponent {
   constructor(public headerAuthService:HeaderAuthService) { }
 
   ngOnInit(): void {
+    console.log(this.headerAuthService.isAuthenticated())
     if (localStorage.length>0) {
       let infos = JSON.parse(localStorage.getItem('userData') || '');
       this.loginUser = infos.user.code;
@@ -24,10 +26,6 @@ export class HeaderComponent {
       else{
         this.headerAuthService.logout();
       }
-
-    }
-    else{
-      this.headerAuthService.logout();
     }
   }
 

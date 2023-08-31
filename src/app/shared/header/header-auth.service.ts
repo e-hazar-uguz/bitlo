@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderAuthService {
 
-  constructor(private router: Router,) { }
+  constructor(private router: Router) { }
 
   private isLoggedIn: boolean = false;
 

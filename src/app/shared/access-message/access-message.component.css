@@ -8,3 +8,67 @@
     justify-content: center;
 }
 
+
+@media (min-width: 1600px){
+    .message {
+        font-size: 3rem; 
+        height: 26vh;
+}
+
+}
+
+@media (min-width: 1281px) and (max-width: 1500px)  {
+            .message {
+                font-size: 3rem; 
+                height: 26vh;
+    }
+  
+  }
+  
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    .message {
+        font-size: 3rem; 
+        height: 65vh;
+}
+    
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    .message {
+        font-size: 3rem;
+        height: 57vh;
+    }
+    
+  }
+
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    .message {
+        font-size: 3rem; 
+        height: 40vh;
+}
+    
+  }
+
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    .message {
+        font-size: 2rem; 
+        height: 52vh;
+}
+  
+  }
+  
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    .message {
+        font-size: 1rem; 
+        height: 35vh;
+}
+  }

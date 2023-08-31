@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 85vh;
+    height: 81.2vh;
     text-align: left;
   }
   
@@ -15,16 +15,105 @@
     width: 500px;
   }
   
-@media screen and (max-width: 768px) {
-  .user-info {
-      width: 80%;
-      margin: 0 auto; 
+@media (min-width: 1600px){
+  .user-info-container {
+    height: 85.5vh;
   }
+  .user-info {
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+  }
+
 }
 
-@media screen and (max-width: 576px) {
+@media (min-width: 1281px) and (max-width: 1500px)  {
+  .user-info-container {
+    height: 88vh;
+  }
   .user-info {
-      width: 100%;
-      
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+  }
+  
+
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  .user-info-container {
+    height: 88vh;
+  }
+  .user-info {
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+  }
+  
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .user-info-container {
+    height: 80vh;
+  }
+  .user-info {
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+  }
+  
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .user-info-container {
+    height: 82vh;
+  }
+  .user-info {
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+  }
+  
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .user-info-container {
+    height: 73vh;
+  }
+  .user-info {
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .user-info-container {
+    height: 56vh;
+  }
+  .user-info {
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  p{
+    font-size: 10px;
   }
 }
