@@ -10,6 +10,6 @@ export class MainPageComponent {
   name = 'Emre Hazar UĞUZ'
   phone='+905325964908'
   githubLink='https://github.com/e-hazar-uguz/bitlo.git';
-  projectLink=''  
+  projectLink='https://test-bitlo.netlify.app'  
 
 }
