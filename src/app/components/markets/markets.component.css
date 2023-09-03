@@ -21,7 +21,7 @@ li {
         max-width: 80%;
       }
       .modal{
-        margin-left: 5rem;
+        margin-left: 16rem;
         width:60% ;
       }
     
@@ -34,21 +34,22 @@ li {
       }
       .modal{
         width:70% ;
-        margin-left: 1rem;
+        margin-left: 10rem;
       }
+
   }
   
   
   @media (min-width: 768px) and (max-width: 1024px) {
     .responsive-image {
-        max-width:70%;
+       width:50%;
       }
   }
   
   
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .responsive-image {
-        max-width: 70%;
+       width: 70%;
       }
   }
   
